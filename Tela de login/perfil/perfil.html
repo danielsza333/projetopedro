@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Certifique-se de incluir o seu CSS -->
+</head>
+<body>
+
+    <header class="header-bar">
+        Compact-Disc @
+    </header>
+
+    <!-- Navegação -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pesquisa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Categorias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Populares</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container mt-5">
+        <div class="row">
+            <!-- Avatar do usuário -->
+            <div class="col-md-4">
+                <div class="avatar-container">
+                    <img id="profileAvatar" src="" alt="Avatar" class="img-fluid rounded-circle avatar-img" style="width: 150px; height: 150px;">
+                </div>
+            </div>
+
+            <!-- Informações do usuário e biografia -->
+            <div class="col-md-8">
+                <div class="user-info-container p-3 mb-4 border rounded">
+                    <h2 id="usernameDisplay"></h2>
+                    <p><strong>Idade:</strong> <span id="ageDisplay"></span></p>
+                    <p><strong>Gênero:</strong> <span id="genderDisplay"></span></p>
+                </div>
+
+                <!-- Seção de biografia -->
+                <div class="bio-section mb-4">
+                    <h3>Biografia</h3>
+                    <textarea id="bioInput" class="form-control" rows="5" placeholder="Escreva algo sobre você..." maxlength="10000"></textarea>
+                    <button id="saveBioBtn" class="btn btn-success mt-2">Salvar Bio</button>
+                </div>
+
+                <!-- Exibição dos álbuns avaliados -->
+                <div class="albums-section mb-4">
+                    <h3>Álbuns Avaliados</h3>
+                    <div class="row" id="albumsRow">
+                        <!-- Álbuns serão inseridos aqui dinamicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Recuperando os dados do localStorage
+        window.onload = function() {
+            const username = localStorage.getItem("username");
+            const age = localStorage.getItem("age");
+            const gender = localStorage.getItem("gender");
+            const avatar = localStorage.getItem("avatar");
+            const bio = localStorage.getItem("bio");
+            const albums = JSON.parse(localStorage.getItem("albums")) || [];
+
+            // Exibindo as informações na página de perfil
+            document.getElementById("usernameDisplay").innerText = username;
+            document.getElementById("ageDisplay").innerText = age;
+            document.getElementById("genderDisplay").innerText = gender;
+
+            // Exibindo o avatar, se existir
+            if (avatar) {
+                document.getElementById("profileAvatar").src = avatar;
+            } else {
+                document.getElementById("profileAvatar").src = "default-avatar.png"; // Coloque o caminho da imagem padrão
+            }
+
+            // Exibindo a biografia, se existir
+            if (bio) {
+                document.getElementById("bioInput").value = bio;
+            }
+
+            // Exibindo os álbuns avaliados
+            const albumsRow = document.getElementById("albumsRow");
+            albums.forEach(album => {
+                const albumDiv = document.createElement("div");
+                albumDiv.classList.add("col-md-2", "mb-3");
+                albumDiv.innerHTML = `
+                    <div class="album-card">
+                        <img src="${album.cover}" alt="${album.title}" class="img-fluid">
+                        <p class="mt-2">${album.title}</p>
+                        <p><strong>${album.stars} estrelas</strong></p>
+                    </div>
+                `;
+                albumsRow.appendChild(albumDiv);
+            });
+        };
+
+        // Salvando a biografia
+        document.getElementById("saveBioBtn").addEventListener("click", function() {
+            const bio = document.getElementById("bioInput").value;
+            localStorage.setItem("bio", bio);
+            alert("Biografia salva com sucesso!");
+        });
+    </script>
+
+</body>
+</html>

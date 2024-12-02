@@ -1,0 +1,117 @@
+/* Estilos para a página de perfil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #fff;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.header-bar {
+    background-color: #4CAF50; /* Faixa verde */
+    color: #fff; /* Texto branco */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: #333;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4CAF50 !important;
+}
+
+/* Avatar */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.avatar-img {
+    border: 4px solid #fff; /* Borda branca ao redor do avatar */
+    width: 400%; /* Aumente a largura para 200px */
+    height: 400%; /* Aumente a altura para 200px */
+    border-radius: 50%; /* Deixa a imagem redonda */
+}
+
+/* Informações do usuário */
+.user-info-container {
+    border: 1px solid #4CAF50; /* Borda verde */
+    padding: 20px;
+    background-color: #1e1e1e;
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Biografia */
+.bio-section textarea {
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #4CAF50;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.bio-section button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.bio-section button:hover {
+    background-color: #45a049;
+}
+
+/* Exibição dos álbuns avaliados */
+.albums-section .album-card {
+    text-align: center;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #4CAF50;
+}
+
+.albums-section img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.albums-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.albums-section .col-md-2 {
+    flex: 1;
+    margin: 10px;
+}

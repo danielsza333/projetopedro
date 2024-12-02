@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - WhatsApp Style</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-bar">
+        Compact-Disc @
+    </header>
+
+    <!-- Tela de Login -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="login-container p-4">
+            <h1 class="text-center text-success mb-4">Bem-vindo! Cadastre-se:</h1>
+
+            <!-- Avatar -->
+            <div class="profile-picture-container text-center mb-4">
+                <div id="avatar" class="avatar">
+                    <img id="avatarImage" src="" alt="Avatar" class="avatar-img" />
+                </div>
+                <label for="profilePicture" class="upload-btn">Escolher Foto (Opcional)</label>
+                <input type="file" id="profilePicture" accept="image/*" />
+            </div>
+
+            <!-- Campos de formulário -->
+            <div class="form-group mb-3"> Nome de usuário:
+                <input type="text" id="username" class="form-control"  placeholder="Nome" required />
+            </div>
+
+            <div class="form-group mb-3"> Idade:
+                <input type="number" id="age" class="form-control" placeholder="Idade" required />
+            </div>
+
+            <div class="form-group gender-group mb-4 d-flex justify-content-between">
+                <label>
+                    <input type="radio" name="gender" value="feminino" id="feminino" />
+                    Feminino
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="masculino" id="masculino" />
+                    Masculino
+                </label>
+            </div>
+
+            <!-- Botão de prosseguir -->
+            <button id="submitBtn" class="btn btn-success w-100">Prosseguir</button>
+        </div>
+    </div>
+
+    <!-- Importar o arquivo de script externo -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo preto */
+    color: white;
+}
+
+/* Estilo do header */
+.header-bar {
+    background-color: #4CAF50; /* Faixa verde */
+    color: #fff; /* Texto branco */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Lobster', cursive; /* Fonte Cool */
+    font-size: 48px; /* Tamanho grande */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    margin-bottom: 30px; /* Espaço abaixo do header */
+}
+
+/* Container do login */
+.login-container {
+    background-color: #1c1c1c; /* Fundo escuro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(18, 242, 29, 0.5);
+    width: 100%;
+    max-width: 400px; /* Largura máxima */
+}
+.login-container:hover{
+    color: #81fb71;
+
+}
+
+/* Estilo para o avatar */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #959795; /* Cor verde escuro inicialmente */
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid #fff; /* Borda branca */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para o botão de upload da foto */
+.upload-btn {
+    display: inline-block;
+    background-color: #4CAF50; /* Verde escuro */
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 25px;
+    transition: box-shadow 0.3s ease-in-out; /* Transição suave para o brilho */
+}
+/* Efeito de brilho verde claro ao passar o mouse */
+.upload-btn:hover {
+    box-shadow: 0 0 10px 4px rgba(76, 175, 80, 0.8); /* Brilho verde claro */
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Estilo dos campos de entrada */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #222;
+    color: rgb(241, 240, 240);
+    font-size: 16px;
+}
+
+/* Estilo para os botões de gênero */
+.gender-group label {
+    color: white;
+    font-size: 16px;
+}
+
+/* Botão de prosseguir */
+.btn-success {
+    background-color: #4CAF50; /* Verde escuro */
+    color: rgb(247, 248, 250);
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-success:hover {
+    box-shadow: 0 0 10px 4px rgba(67, 255, 73, 0.8); /* Brilho verde claro */
+}
+
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .login-container {
+        width: 90%;
+    }
+}

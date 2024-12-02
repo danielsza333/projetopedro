@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregador de Álbuns Musicais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-bar">
+        Compact-Disc @
+    </header>
+
+    <!-- Navegação -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Página Inicial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pesquisa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Categorias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Populares</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <!-- Descubra Coisas Novas -->
+        <div class="section">
+            <h2>Descubra Coisas Novas:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="discover-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- O Melhor do Brasil -->
+        <div class="section">
+            <h2>O Melhor do Brasil:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="brazil-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- O Melhor do Mundo -->
+        <div class="section">
+            <h2>Os Melhores da Historia:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="world-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- O Melhor de Antigamente -->
+        <div class="section">
+            <h2>O Melhor de Antigamente:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="oldies-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- O Melhor do Pop -->
+        <div class="section">
+            <h2>O Melhor do Pop:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="pop-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- Álbuns Recentes -->
+        <div class="section">
+            <h2>Álbuns Recentes:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="recent-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- Melhores Avaliados -->
+        <div class="section">
+            <h2>O Melhor do Rock:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="best-rated-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- Na Lista da Rolling Stone -->
+        <div class="section">
+            <h2>Na Lista da Rolling Stone:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="rolling-stone-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- Quem Você Segue Curte -->
+        <div class="section">
+            <h2>Melhores Albuns Internacionais:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="followed-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+        <!-- Clássicos da Música -->
+        <div class="section">
+            <h2>Classicos da Música:</h2>
+            <div class="album-row">
+                <button class="btn btn-dark arrow-left" onclick="scrollAlbums(-1)">&#60;</button>
+                <div class="album-container" id="classics-row"></div>
+                <button class="btn btn-dark arrow-right" onclick="scrollAlbums(1)">&#62;</button>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Link para o JavaScript -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

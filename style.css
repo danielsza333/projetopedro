@@ -1,0 +1,222 @@
+/* Fonte "cool" - Lobster */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.header-bar {
+    background-color: #4CAF50; /* Faixa verde */
+    color: #fff; /* Texto branco */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Lobster', cursive; /* Fonte Cool */
+    font-size: 48px; /* Tamanho grande */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Ajustes no header da barra de navegação */
+.navbar {
+    background-color: #333;
+    margin-bottom: 0; /* Remove o espaçamento entre a faixa verde e a navbar */
+}
+
+/* Flexbox para a navbar */
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os itens */
+    padding: 0 30px;
+}
+
+/* Estilo dos links de navegação */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+    margin-right: 100px; /* Espaço entre os links */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Específico para o primeiro item "Perfil" */
+.navbar-nav .nav-item:first-child .nav-link {
+    margin-inline-start: 225px; /* Espaçamento extra entre "Perfil" e a margem direita */
+}
+
+/* Estilo quando o mouse passa sobre o link */
+.navbar-nav .nav-link:hover {
+    color: #4CAF50 !important; /* Efeito de cor verde ao passar o mouse */
+}
+
+/* Adiciona o espaçamento entre as seções */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Ajustes no body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ddd;
+}
+
+/* Ajustes para o container de álbuns */
+.album-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+/* Adiciona espaçamento entre os quadrados de cada álbum */
+.album-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+    border-radius: 10px;
+}
+
+/* Efeito para os botões de setas */
+.arrow-left, .arrow-right {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: #45a049;
+}
+
+
+/* Outros estilos */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ddd;
+}
+/* Header */
+header {
+    margin-bottom: 30px;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4CAF50 !important; /* Verde quando o mouse passa */
+}
+
+/* Títulos das seções - Fonte mais jovem e com efeito de brilho */
+h2 {
+    font-size: 28px; /* Aumentei o tamanho da fonte para chamar mais atenção */
+    font-weight: bold;
+    color: #4CAF50;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    transition: text-shadow 0.3s ease; /* Transição suave para o brilho */
+}
+
+h2:hover {
+    text-shadow: 0 0 10px #4CAF50; /* Efeito de brilho verde */
+}
+
+/* Espaçamento maior entre as seções */
+.section {
+    margin-bottom: 50px; /* Espaçamento entre as seções */
+}
+
+/* Estilo da container de álbuns */
+.album-row {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+/* Container dos álbuns - Flexbox para exibição em linha */
+.album-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+/* Estilo das imagens dos álbuns */
+.album-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+/* Efeito ao passar o mouse nas imagens dos álbuns */
+.album-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Botões de rolagem (setas) */
+.arrow-left, .arrow-right {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    transform: scale(1.2);
+}
+
+/* Espaçamento maior na primeira seção */
+.section:first-of-type {
+    margin-top: 50px; /* Maior espaço no topo da primeira seção */
+}
+
+/* Estilo das setas de rolagem */
+.arrow-left, .arrow-right {
+    font-size: 2rem;
+    color: #fff;
+    padding: 10px;
+}
+/* Remove o sublinhado e define a cor do texto como branco para todos os estados do link */
+.album-card a {
+    color: white;           /* Define a cor do texto como branco */
+    text-decoration: none;  /* Remove o sublinhado */
+}
+
+/* Garante que o link continue sem sublinhado e com cor branca quando o usuário passar o mouse */
+.album-card a:hover {
+    color: white;           /* Cor branca no estado hover */
+    text-decoration: none;  /* Remove o sublinhado no estado hover */
+}
+
+/* Garante que o link sem sublinhado e com cor branca também quando já tiver sido visitado */
+.album-card a:visited {
+    color: white;           /* Cor branca no estado visitado */
+    text-decoration: none;  /* Remove o sublinhado no estado visitado */
+}
+
+/* Garante que o link continue sem sublinhado e com cor branca quando estiver ativo (clicado) */
+.album-card a:active {
+    color: white;           /* Cor branca no estado ativo */
+    text-decoration: none;  /* Remove o sublinhado no estado ativo */
+}
+
+
+
+/* Fonte jovem - Fonte Poppins foi carregada do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
